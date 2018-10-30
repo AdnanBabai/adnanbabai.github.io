@@ -1,4 +1,8 @@
-$(window).load(() => $(".loader").fadeOut());
+$(document).ready(function(){
+    $(window).load(function(){
+        $(".loader").fadeOut();
+    })
+})
 
 
 const Form = document.getElementById("form");
