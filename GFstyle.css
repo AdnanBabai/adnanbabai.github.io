@@ -13,7 +13,7 @@ body {
     line-height: 1.7; 
 }
 .main {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg-main.jpg") center center repeat-y;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("bg-main.png") center center repeat-y;
     background-size: cover;
     padding: 30px 0;
     text-align: center;
@@ -208,6 +208,11 @@ body {
         padding-top: 20px;
     }
     .user__data {
+        margin: 30px auto ;
+        width: 90%;
+        height: 70%;
+    }
+	.not-found {
         margin: 30px auto ;
         width: 90%;
         height: 70%;
