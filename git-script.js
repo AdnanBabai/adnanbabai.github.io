@@ -1,3 +1,5 @@
+$(window).load(() => $(".loader").fadeOut());
+
 
 const Form = document.getElementById("form");
 const userName = document.getElementById("name");
