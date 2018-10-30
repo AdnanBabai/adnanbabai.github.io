@@ -13,6 +13,7 @@ function hideMessage(){
 }
 function showMessage(){
     document.getElementById("message").innerHTML = "Don't type space while typing username.";
+    document.getElementById("not-found").style.display = "none";
     document.getElementById("getdata").style.display = "none";
     document.getElementById("userImg").style.display = "none";
     response.innerHTML = null;
