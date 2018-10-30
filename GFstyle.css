@@ -130,10 +130,20 @@ body {
 	z-index: 9999;
 	background: url("loader.svg") 50% 50% no-repeat ;
 }
-#not-found {
+.not-found {
+    display: none;
+    margin-top: 5px; 
+   background-color: rgb(206, 182, 137);
+   width: 30vw;
+   height: 32vh;
+   padding: 40px 0;
+   border-radius: 3px;
+    
+}
+.not-found p {
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 60px;
     font-size: 2rem;
     font-family: 'Titillium Web', sans-serif;
 }

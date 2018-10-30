@@ -13,16 +13,16 @@ function showMessage(){
     document.getElementById("message").innerHTML = "Don't type space while typing username.";
     document.getElementById("getdata").style.display = "none";
     document.getElementById("userImg").style.display = "none";
+    response.innerHTML = null;
 }
 
- 
-    
 Form.onsubmit = sendData;
 
 function sendData(e) {
     e.preventDefault();
 
      document.getElementById("loader").style.display = "block";
+    
     let url = `https://api.github.com/users/${userName.value}`;
     fetch(url).then(res => res.json()).then(data => {
         
@@ -35,19 +35,19 @@ function sendData(e) {
         
         if(data.login === undefined) {
             document.getElementById("loader").style.display = "none";
-            document.getElementById("getdata").style.display = "block";
-            let img_url = data.avatar_url;
+            document.getElementById("getdata").style.display = "none";
+            document.getElementById("not-found").style.display = "block";
+           
             document.getElementById("userImg").style.display = "block";
-            document.getElementById("userImg").setAttribute("src", 'emoji.png');
-            // response.innerHTML = document.getElementById("not-found").innerHTML;
+            document.getElementById("userImg").setAttribute("src", 'emoji.png');     
+                  
+        }else 
+        {
 
-        }else {
             let img_url = data.avatar_url;
         document.getElementById("userImg").setAttribute("src", img_url);
+        document.getElementById("not-found").style.display = "none";
         document.getElementById("userImg").style.display = "block";
-        
-        
-        
         let newData = responseTemplate.replace('{{name}}', data.login);
         newData = newData.replace("{{id}}", data.id);
         newData = newData.replace("{{email}}", data.email);
@@ -56,10 +56,10 @@ function sendData(e) {
         document.getElementById("loader").style.display = "none";
         document.getElementById("getdata").style.display = "block";
         response.innerHTML = newData;
-        
          
     };
-        }
+     
+} 
         
     
     
